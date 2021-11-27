@@ -80,7 +80,6 @@ const checkIfWalletIsConnected = async (setAccount) => {
 
 const App = () => {
   const [currentAccount, setCurrentAccount] = useState("");
-  const [openSeaLink, setOpenSeaLink] = useState("");
   const [loading, setLoading] = useState(null);
 
   useEffect(() => {
@@ -163,7 +162,7 @@ const App = () => {
             </button>
           )}
           {typeof loading === 'boolean' ?
-          (<p className="sub-text">{loading ? "Loading..." : `Here's your link: ${openSeaLink}`}</p>)
+          (<p className="sub-text">{loading ? "Loading..." : 'NFT Minted!'}</p>)
           : null
           }
         </div>
