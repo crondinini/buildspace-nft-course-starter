@@ -128,13 +128,6 @@ const App = () => {
           console.log("Mining...please wait.")
           await nftTxn.wait();
 
-          // connectedContract.on("NewZenFTMinted", (from, tokenId) => {
-          //   console.log(from, tokenId.toNumber())
-          //   alert(`Hey there! We've minted your NFT. It may be blank right now. It can take a max of 10 min to show up on OpenSea. Here's the link: <https://testnets.opensea.io/assets/${CONTRACT_ADDRESS}/${tokenId.toNumber()}>`)
-          //   setOpenSeaLink(`https://testnets.opensea.io/assets/${CONTRACT_ADDRESS}/${tokenId.toNumber()}`);
-          //   setLoading(false);
-          // });
-
           console.log(`Mined, see transaction: https://rinkeby.etherscan.io/tx/${nftTxn.hash}`);
 
         } else {
